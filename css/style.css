@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: rgb(227, 136, 38);
+  --cyan: rgb(0, 105, 112);
+  --darkCyan: rgb(0, 66, 65);
+  --lightGray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+
+body {
+  background-color: var(--lightGray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  padding: 5.5rem 24px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.main {
+  display: grid;
+  max-width: 327px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 920px;
+  }
+}
+
+.card {
+  padding: 3rem;
+}
+.card--orange {
+  background-color: var(--orange);
+  color: var(--orange);
+}
+.card--cyan {
+  background-color: var(--cyan);
+  color: var(--cyan);
+}
+.card--darkCyan {
+  background-color: var(--darkCyan);
+  color: var(--darkCyan);
+}
+.card__title {
+  font-size: 2.5rem;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  color: var(--lightGray);
+}
+.card__text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.card__button {
+  background-color: var(--lightGray);
+  color: inherit;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid var(--lightGray);
+  transition: background-color 0.3s;
+}
+.card__button:hover {
+  background-color: unset;
+  color: var(--lightGray);
+}
